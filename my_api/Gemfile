@@ -8,6 +8,7 @@ gem 'pry-rails'
 gem 'sprockets-rails'
 gem 'active_model_serializers'
 gem 'rack-cors'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug'
