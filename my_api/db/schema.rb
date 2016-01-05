@@ -11,13 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105182300) do
+ActiveRecord::Schema.define(version: 20160105190604) do
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "author"
-    t.date     "date"
-    t.text     "body"
+  create_table "badges", force: :cascade do |t|
+    t.string   "catchphrase"
+    t.integer  "vote",        default: 0
+    t.integer  "student_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
