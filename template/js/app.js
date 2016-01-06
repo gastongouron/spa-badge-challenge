@@ -7,23 +7,18 @@ $(function () {
   // console.log(theTemplate)
   // Define our data object
 
-
 var context = $.getJSON("http://localhost:3000/students",function(data){
-  for(i = 0; i < data.length; i++) {
-    // return()
-    console.log(data[i]['name']);
-  }
+  // for(i = 0; i < data.length; i++) {
+    // console.log(data[i]['name']);
+      data[1]['name'];
+  // }
 });
 
-  var context=[{
-    "city": "Everywhere",
-    "street": "Baker Street",
-    "number": "221B"
-  },{
-    "city": "ZZZZe",
-    "street": "Baker Street",
-    "number": "221B"
-  }];
+console.log(context)
+
+// var jsonResponse = JSON.parse(context.responseText);
+// // console.log(context)
+// console.log(jsonResponse);
 
   // Pass our data to the template
   var theCompiledHtml = theTemplate(context);
